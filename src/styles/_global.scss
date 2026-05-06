@@ -1,48 +1,35 @@
 // @use "./fonts";
 @use "./colors";
 
-// label, input, span, p, textarea, button {
-//   @include fonts.text-medium;
-//   color: var(--text);
-//   &::placeholder {
-//     color: var(--placeholder);
-//   }
-//   background: transparent;
-// }
-
-// h1 { @include fonts.title-medium; color: var(--text); }
-// h2 { @include fonts.title-small; color: var(--text); }
-// h3 { @include fonts.title-xsmall; color: var(--text); }
-// h4 { @include fonts.subtitle; color: var(--text); }
-// h5, h6 { @include fonts.text-medium-bold; color: var(--text); }
-
-// a { color: var(--primary); text-decoration: underline; }
-
-// ul, ol { @include fonts.text-medium; color: var(--text); padding-left: 24px; }
-
-// blockquote { border-left: 4px solid var(--primary); padding: 8px 16px; color: var(--placeholder); }
-
-// code { @include fonts.code; background: var(--secondary); padding: 2px 6px; border-radius: 4px; }
-
-// pre { background: var(--secondary); padding: 16px; border-radius: 6px; overflow-x: auto;
-//   code { background: none; padding: 0; }
-// }
-
-// table { width: 100%; border-collapse: collapse; }
-// th { @include fonts.text-medium-bold; background: var(--secondary); padding: 10px 14px; text-align: left; border: 1px solid var(--secondary); }
-// td { @include fonts.text-medium; padding: 10px 14px; border: 1px solid var(--secondary); }
-
-// hr { border: none; border-top: 1px solid var(--secondary); margin: 24px 0; }
-
-// ul.contains-task-list {
-//   list-style: none;
-//   padding-left: 0;
-// }
-
-// .task-list-item {
-//   list-style: none;
-// }
-
 html, body { margin: 0; padding: 0; background: var(--background); }
+
+button {
+    display: flex;
+    border: none;
+    background: var(--primary);
+    padding: 0rem;
+    border-radius: 0.5rem;
+
+    align-items: center;
+    justify-content: center;
+
+    &:hover:not(:disabled) {
+        cursor: pointer;
+        filter: brightness(1.1); 
+    }
+
+    &:active:not(:disabled) {
+        transform: scale(0.95);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    * {
+        -webkit-user-drag: none;
+    }
+}
 
 
